@@ -199,7 +199,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -215,7 +232,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -231,7 +252,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -239,7 +264,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -353,7 +382,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -417,7 +463,19 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": true,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "conditionalValueNode",
+              "condition": {
+                "kind": "accountValueNode",
+                "name": "coreCollection"
+              },
+              "ifTrue": {
+                "kind": "publicKeyValueNode",
+                "publicKey": "CbNY3JiXdXNE9tPNEk1aRZVEkWdj2v7kfJLNQwZZgpXk",
+                "identifier": "mplCoreSigner"
+              }
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -425,7 +483,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -433,7 +495,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -600,7 +666,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -632,7 +715,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -640,7 +727,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -763,7 +854,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -779,7 +887,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -838,7 +950,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -846,7 +962,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -930,7 +1050,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -957,7 +1094,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -965,7 +1105,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -973,7 +1117,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1074,7 +1222,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1111,7 +1276,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1119,7 +1288,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1326,7 +1499,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAssociatedToken"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1334,7 +1511,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           }
         ],
         "arguments": [
@@ -1388,7 +1569,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1428,7 +1626,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1436,7 +1638,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1550,7 +1756,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1605,7 +1828,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1613,7 +1840,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1788,7 +2019,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1843,7 +2091,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1851,7 +2103,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2026,7 +2282,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2088,7 +2361,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2096,7 +2373,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2250,7 +2531,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2266,7 +2564,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2293,7 +2595,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2301,7 +2606,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2328,7 +2636,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "metadata"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2336,7 +2661,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "masterEdition"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2344,7 +2686,10 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programIdValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2352,7 +2697,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2360,7 +2709,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2371,8 +2724,7 @@
             "docs": [],
             "defaultValue": {
               "kind": "publicKeyValueNode",
-              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-              "identifier": "mplTokenMetadata"
+              "publicKey": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
             }
           },
           {
@@ -2440,7 +2792,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2456,7 +2825,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2483,7 +2856,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2491,7 +2867,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2499,7 +2879,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2582,7 +2966,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2653,7 +3054,19 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": true,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "conditionalValueNode",
+              "condition": {
+                "kind": "accountValueNode",
+                "name": "coreCollection"
+              },
+              "ifTrue": {
+                "kind": "publicKeyValueNode",
+                "publicKey": "CbNY3JiXdXNE9tPNEk1aRZVEkWdj2v7kfJLNQwZZgpXk",
+                "identifier": "mplCoreSigner"
+              }
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2661,7 +3074,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2669,7 +3086,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2794,7 +3215,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2810,7 +3248,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2834,7 +3276,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2842,7 +3288,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2956,7 +3406,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2972,7 +3439,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3003,7 +3474,10 @@
               "This account is checked to be a signer in",
               "the case of `set_and_verify_collection` where",
               "we are actually changing the NFT metadata."
-            ]
+            ],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3011,7 +3485,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3038,7 +3515,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "metadata"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3046,7 +3540,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "masterEdition"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3054,7 +3565,10 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programIdValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3062,7 +3576,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3070,7 +3588,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3081,8 +3603,7 @@
             "docs": [],
             "defaultValue": {
               "kind": "publicKeyValueNode",
-              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-              "identifier": "mplTokenMetadata"
+              "publicKey": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
             }
           },
           {
@@ -3214,7 +3735,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3298,7 +3836,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "CbNY3JiXdXNE9tPNEk1aRZVEkWdj2v7kfJLNQwZZgpXk",
+              "identifier": "mplCoreSigner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3306,7 +3849,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3314,7 +3861,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3474,7 +4025,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           }
         ],
         "arguments": [
@@ -3536,7 +4090,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           }
         ],
         "arguments": [
@@ -3591,7 +4148,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3655,7 +4229,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3663,7 +4241,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3817,7 +4399,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3825,7 +4424,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3899,7 +4501,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3944,7 +4563,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3952,7 +4575,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4127,7 +4754,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4189,7 +4833,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4197,7 +4845,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4351,7 +5003,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4367,7 +5036,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4391,7 +5064,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4399,7 +5076,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4513,7 +5194,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4585,7 +5283,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4593,7 +5295,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4747,7 +5453,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4763,7 +5486,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4794,7 +5521,10 @@
               "This account is checked to be a signer in",
               "the case of `set_and_verify_collection` where",
               "we are actually changing the NFT metadata."
-            ]
+            ],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4802,7 +5532,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4829,7 +5562,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "metadata"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4837,7 +5587,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "masterEdition"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4845,7 +5612,10 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programIdValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4853,7 +5623,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4861,7 +5635,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4872,8 +5650,7 @@
             "docs": [],
             "defaultValue": {
               "kind": "publicKeyValueNode",
-              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-              "identifier": "mplTokenMetadata"
+              "publicKey": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
             }
           },
           {
@@ -4997,7 +5774,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5013,7 +5807,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5048,7 +5846,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5056,7 +5858,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5179,7 +5985,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5234,7 +6057,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5242,7 +6069,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5381,7 +6212,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5443,7 +6291,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5451,7 +6303,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5648,7 +6504,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5706,7 +6579,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5733,7 +6610,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5741,7 +6622,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5752,8 +6637,7 @@
             "docs": [],
             "defaultValue": {
               "kind": "publicKeyValueNode",
-              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-              "identifier": "mplTokenMetadata"
+              "publicKey": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
             }
           },
           {
@@ -5862,7 +6746,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5926,7 +6827,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5934,7 +6839,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6082,7 +6991,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6098,7 +7024,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6129,7 +7059,10 @@
               "This account is checked to be a signer in",
               "the case of `set_and_verify_collection` where",
               "we are actually changing the NFT metadata."
-            ]
+            ],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6137,7 +7070,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6164,7 +7100,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "metadata"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6172,7 +7125,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "masterEdition"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "mint",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "collectionMint"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6180,7 +7150,10 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programIdValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6188,7 +7161,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6196,7 +7173,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6207,8 +7188,7 @@
             "docs": [],
             "defaultValue": {
               "kind": "publicKeyValueNode",
-              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
-              "identifier": "mplTokenMetadata"
+              "publicKey": "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
             }
           },
           {
@@ -6332,7 +7312,24 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6348,7 +7345,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "accountValueNode",
+              "name": "leafOwner"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6383,7 +7384,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6391,7 +7396,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "splAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6514,7 +7523,24 @@
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "pdaValueNode",
+              "pda": {
+                "kind": "pdaLinkNode",
+                "name": "treeConfig"
+              },
+              "seeds": [
+                {
+                  "kind": "pdaSeedValueNode",
+                  "name": "merkleTree",
+                  "value": {
+                    "kind": "accountValueNode",
+                    "name": "merkleTree"
+                  }
+                }
+              ]
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6569,7 +7595,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplNoop"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6577,7 +7607,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "programLinkNode",
+              "name": "mplAccountCompression"
+            }
           },
           {
             "kind": "instructionAccountNode",
