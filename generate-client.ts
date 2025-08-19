@@ -1,5 +1,5 @@
 import { type AnchorIdl, rootNodeFromAnchorWithoutDefaultVisitor } from "@codama/nodes-from-anchor";
-import { assertIsNode, bottomUpTransformerVisitor, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, programNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateDefinedTypesVisitor, updateProgramsVisitor, visit, type Visitor } from "codama";
+import { assertIsNode, bottomUpTransformerVisitor, constantPdaSeedNodeFromString, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, numberTypeNode, pdaSeedValueNode, programNode, publicKeyTypeNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateAccountsVisitor, updateDefinedTypesVisitor, updateProgramsVisitor, variablePdaSeedNode, visit, type Visitor } from "codama";
 import bubblegumIdl from "./idls/bubblegum.json" with { type: "json" };
 import { writeFileSync } from "node:fs";
 import path from "node:path";
@@ -90,6 +90,23 @@ codama.update(
         UpdateArgsWrapper: { delete: true }
     })
 );
+
+// Update accounts.
+codama.update(
+    updateAccountsVisitor({
+        treeConfig: {
+            seeds: [variablePdaSeedNode("merkleTree", publicKeyTypeNode())],
+            size: 96
+        },
+        voucher: {
+            seeds: [
+                constantPdaSeedNodeFromString("utf8", "voucher"),
+                variablePdaSeedNode("merkleTree", publicKeyTypeNode()),
+                variablePdaSeedNode("nonce", numberTypeNode("u64"))
+            ]
+        }
+    })
+)
 
 // Render tree.
 writeFileSync(

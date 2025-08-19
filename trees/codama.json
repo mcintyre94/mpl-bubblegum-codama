@@ -13,7 +13,7 @@
       {
         "kind": "accountNode",
         "name": "treeConfig",
-        "size": 91,
+        "size": 96,
         "docs": [],
         "data": {
           "kind": "structTypeNode",
@@ -105,6 +105,10 @@
             }
           ]
         },
+        "pda": {
+          "kind": "pdaLinkNode",
+          "name": "treeConfig"
+        },
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -166,6 +170,10 @@
               }
             }
           ]
+        },
+        "pda": {
+          "kind": "pdaLinkNode",
+          "name": "voucher"
         },
         "discriminators": [
           {
@@ -7892,7 +7900,59 @@
         }
       }
     ],
-    "pdas": [],
+    "pdas": [
+      {
+        "kind": "pdaNode",
+        "name": "treeConfig",
+        "docs": [],
+        "seeds": [
+          {
+            "kind": "variablePdaSeedNode",
+            "name": "merkleTree",
+            "docs": [],
+            "type": {
+              "kind": "publicKeyTypeNode"
+            }
+          }
+        ]
+      },
+      {
+        "kind": "pdaNode",
+        "name": "voucher",
+        "docs": [],
+        "seeds": [
+          {
+            "kind": "constantPdaSeedNode",
+            "type": {
+              "kind": "stringTypeNode",
+              "encoding": "utf8"
+            },
+            "value": {
+              "kind": "stringValueNode",
+              "string": "voucher"
+            }
+          },
+          {
+            "kind": "variablePdaSeedNode",
+            "name": "merkleTree",
+            "docs": [],
+            "type": {
+              "kind": "publicKeyTypeNode"
+            }
+          },
+          {
+            "kind": "variablePdaSeedNode",
+            "name": "nonce",
+            "docs": [],
+            "type": {
+              "kind": "numberTypeNode",
+              "format": "u64",
+              "endian": "le"
+            }
+          }
+        ]
+      }
+    ],
     "errors": [
       {
         "kind": "errorNode",
