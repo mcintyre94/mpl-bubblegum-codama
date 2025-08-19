@@ -1,5 +1,5 @@
 import { type AnchorIdl, rootNodeFromAnchorWithoutDefaultVisitor } from "@codama/nodes-from-anchor";
-import { assertIsNode, bottomUpTransformerVisitor, constantPdaSeedNodeFromString, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, numberTypeNode, pdaSeedValueNode, programNode, publicKeyTypeNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateAccountsVisitor, updateDefinedTypesVisitor, updateProgramsVisitor, variablePdaSeedNode, visit, type Visitor } from "codama";
+import { assertIsNode, bottomUpTransformerVisitor, constantPdaSeedNodeFromString, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, instructionAccountNode, instructionArgumentNode, numberTypeNode, pdaSeedValueNode, programNode, publicKeyTypeNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateAccountsVisitor, updateDefinedTypesVisitor, updateProgramsVisitor, variablePdaSeedNode, visit, type Visitor } from "codama";
 import bubblegumIdl from "./idls/bubblegum.json" with { type: "json" };
 import { writeFileSync } from "node:fs";
 import path from "node:path";
@@ -115,6 +115,92 @@ codama.update(
         InstructionName: { delete: true },
     })
 )
+
+// Custom tree updates.
+codama.update(
+    bottomUpTransformerVisitor([
+        {
+            // Rename `treeAuthority` instruction account to `treeConfig`.
+            select: '[instructionAccountNode]treeAuthority',
+            transform: (node) => {
+                assertIsNode(node, "instructionAccountNode");
+                return instructionAccountNode({
+                    ...node,
+                    name: "treeConfig",
+                });
+            }
+        },
+        {
+            // Rename `treeDelegate` instruction account to `treeCreatorOrDelegate`.
+            select: '[instructionAccountNode]treeDelegate',
+            transform: (node) => {
+                assertIsNode(node, "instructionAccountNode");
+                return instructionAccountNode({
+                    ...node,
+                    name: "treeCreatorOrDelegate",
+                });
+            }
+        },
+        {
+            // Rename `editionAccount` instruction account to `collectionEdition`.
+            select: '[instructionAccountNode]editionAccount',
+            transform: (node) => {
+                assertIsNode(node, "instructionAccountNode");
+                return instructionAccountNode({
+                    ...node,
+                    name: 'collectionEdition',
+                })
+            }
+        },
+        {
+            // Rename `message` arg to `metadata`.
+            // Note: this uses structFieldTypeNode in metaplex repo, I think that's a mistake
+            // message is always an instructionArgumentNode
+            select: '[instructionArgumentNode]message',
+            transform: (node) => {
+                assertIsNode(node, "instructionArgumentNode");
+                return instructionArgumentNode({
+                    ...node,
+                    name: "metadata",
+                })
+            }
+        },
+        {
+            // Update `collectionAuthorityRecordPda` account as `optional`.
+            select: '[instructionAccountNode]collectionAuthorityRecordPda',
+            transform: (node) => {
+                assertIsNode(node, "instructionAccountNode");
+                return instructionAccountNode({
+                    ...node,
+                    isOptional: true,
+                });
+            }
+        }
+    ])
+)
+
+/*
+kinobi.update(
+  new k.TransformNodesVisitor([
+    
+
+    {
+      // Update `collectionAuthorityRecordPda` account as `optional`.
+      selector: {
+        kind: "instructionAccountNode",
+        name: "collectionAuthorityRecordPda",
+      },
+      transformer: (node) => {
+        k.assertInstructionAccountNode(node);
+        return k.instructionAccountNode({
+          ...node,
+          isOptional: true,
+        });
+      },
+    },
+  ])
+);
+*/
 
 // Render tree.
 writeFileSync(

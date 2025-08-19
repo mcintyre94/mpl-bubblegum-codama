@@ -195,7 +195,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -349,7 +349,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -596,7 +596,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -706,7 +706,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -759,7 +759,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -926,7 +926,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -1070,7 +1070,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -1384,7 +1384,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -1546,7 +1546,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -1784,7 +1784,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -2022,7 +2022,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -2246,7 +2246,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -2289,7 +2289,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
@@ -2308,7 +2308,7 @@
             "name": "collectionAuthorityRecordPda",
             "isWritable": false,
             "isSigner": false,
-            "isOptional": false,
+            "isOptional": true,
             "docs": [
               "If there is no collecton authority record PDA then",
               "this must be the Bubblegum program address."
@@ -2332,7 +2332,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "editionAccount",
+            "name": "collectionEdition",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -2436,7 +2436,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -2479,7 +2479,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
@@ -2536,7 +2536,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -2578,7 +2578,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -2597,7 +2597,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": true,
             "isOptional": true,
@@ -2790,7 +2790,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -2952,7 +2952,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -2995,7 +2995,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -3018,7 +3018,7 @@
             "name": "collectionAuthorityRecordPda",
             "isWritable": false,
             "isSigner": false,
-            "isOptional": false,
+            "isOptional": true,
             "docs": [
               "If there is no collecton authority record PDA then",
               "this must be the Bubblegum program address."
@@ -3042,7 +3042,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "editionAccount",
+            "name": "collectionEdition",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -3176,7 +3176,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -3210,7 +3210,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -3436,7 +3436,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -3462,7 +3462,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -3524,7 +3524,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -3587,7 +3587,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -3813,7 +3813,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -3895,7 +3895,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -4123,7 +4123,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -4347,7 +4347,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -4509,7 +4509,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -4743,7 +4743,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -4786,7 +4786,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -4809,7 +4809,7 @@
             "name": "collectionAuthorityRecordPda",
             "isWritable": false,
             "isSigner": false,
-            "isOptional": false,
+            "isOptional": true,
             "docs": [
               "If there is no collecton authority record PDA then",
               "this must be the Bubblegum program address."
@@ -4833,7 +4833,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "editionAccount",
+            "name": "collectionEdition",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -4967,7 +4967,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -4993,7 +4993,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -5149,7 +5149,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -5175,7 +5175,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -5351,7 +5351,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -5377,7 +5377,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -5644,7 +5644,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -5858,7 +5858,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -6078,7 +6078,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -6121,7 +6121,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "treeDelegate",
+            "name": "treeCreatorOrDelegate",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -6144,7 +6144,7 @@
             "name": "collectionAuthorityRecordPda",
             "isWritable": false,
             "isSigner": false,
-            "isOptional": false,
+            "isOptional": true,
             "docs": [
               "If there is no collecton authority record PDA then",
               "this must be the Bubblegum program address."
@@ -6168,7 +6168,7 @@
           },
           {
             "kind": "instructionAccountNode",
-            "name": "editionAccount",
+            "name": "collectionEdition",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -6302,7 +6302,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -6328,7 +6328,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
@@ -6484,7 +6484,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
@@ -6510,7 +6510,7 @@
         "accounts": [
           {
             "kind": "instructionAccountNode",
-            "name": "treeAuthority",
+            "name": "treeConfig",
             "isWritable": true,
             "isSigner": false,
             "isOptional": false,
@@ -6686,7 +6686,7 @@
           },
           {
             "kind": "instructionArgumentNode",
-            "name": "message",
+            "name": "metadata",
             "docs": [],
             "type": {
               "kind": "definedTypeLinkNode",
