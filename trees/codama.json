@@ -13,6 +13,7 @@
       {
         "kind": "accountNode",
         "name": "treeConfig",
+        "size": 91,
         "docs": [],
         "data": {
           "kind": "structTypeNode",
@@ -238,7 +239,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -265,15 +271,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -282,15 +283,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -299,15 +295,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -362,7 +353,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -439,7 +433,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+              "identifier": "mplCore"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -447,7 +446,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -474,15 +478,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -491,15 +490,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -508,15 +502,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -528,15 +517,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -656,7 +640,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -683,15 +672,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           }
@@ -835,7 +819,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -859,7 +846,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "identifier": "splToken"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -867,7 +859,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -875,7 +872,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -936,7 +938,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -968,7 +973,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -1072,7 +1082,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1106,7 +1119,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -1249,7 +1267,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1257,7 +1280,11 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "SysvarRent111111111111111111111111111111111"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1265,7 +1292,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1273,7 +1305,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "identifier": "splToken"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1399,7 +1436,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -1426,15 +1468,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1443,15 +1480,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1460,15 +1492,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1523,7 +1550,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1583,7 +1613,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -1610,15 +1645,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1627,15 +1657,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1644,15 +1669,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1664,15 +1684,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -1690,15 +1705,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -1778,7 +1788,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -1838,7 +1851,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -1865,15 +1883,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1882,15 +1895,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1899,15 +1907,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -1919,15 +1922,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -1945,15 +1943,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -2033,7 +2026,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2100,7 +2096,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -2127,15 +2128,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2144,15 +2140,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2161,15 +2152,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2181,15 +2167,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -2293,7 +2274,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2376,7 +2360,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2384,7 +2373,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -2470,7 +2464,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2502,7 +2499,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -2580,7 +2582,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2664,7 +2669,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+              "identifier": "mplCore"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -2672,7 +2682,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -2827,7 +2842,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -2854,15 +2874,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2871,15 +2886,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2888,15 +2898,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -2975,7 +2980,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3062,7 +3070,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3070,7 +3083,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -3097,15 +3115,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3114,15 +3127,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3131,15 +3139,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3211,7 +3214,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3308,7 +3314,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+              "identifier": "mplCore"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3316,7 +3327,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -3343,15 +3359,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3363,15 +3374,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -3585,7 +3591,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3654,7 +3663,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -3681,15 +3695,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3698,15 +3707,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3715,15 +3719,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3735,15 +3734,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -3847,7 +3841,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -3900,7 +3899,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -3950,7 +3952,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -3977,15 +3984,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -3994,15 +3996,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4011,15 +4008,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4031,15 +4023,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -4057,15 +4044,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -4145,7 +4127,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4212,7 +4197,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -4239,15 +4229,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4256,15 +4241,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4273,15 +4253,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4293,15 +4268,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -4429,7 +4399,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -4456,15 +4431,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4473,15 +4443,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4490,15 +4455,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4553,7 +4513,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4630,7 +4593,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -4657,15 +4625,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4674,15 +4637,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4691,15 +4649,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4711,15 +4664,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -4823,7 +4771,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4910,7 +4861,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -4918,7 +4874,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -4945,15 +4906,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4962,15 +4918,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -4979,15 +4930,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5075,7 +5021,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5107,7 +5056,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -5134,15 +5088,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5151,15 +5100,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5168,15 +5112,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5240,7 +5179,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5300,7 +5242,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -5327,15 +5274,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5347,15 +5289,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -5444,7 +5381,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5511,7 +5451,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -5538,15 +5483,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5555,15 +5495,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5572,15 +5507,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5592,15 +5522,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -5726,7 +5651,10 @@
             "docs": [
               "Either collection authority or tree owner/delegate, depending",
               "on whether the item is in a verified collection"
-            ]
+            ],
+            "defaultValue": {
+              "kind": "identityValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5778,7 +5706,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5810,7 +5741,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5818,7 +5754,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -5845,15 +5786,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -5926,7 +5862,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -5995,7 +5934,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -6022,15 +5966,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6042,15 +5981,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -6172,7 +6106,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6259,7 +6196,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+              "identifier": "mplTokenMetadata"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6267,7 +6209,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -6294,15 +6241,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6311,15 +6253,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6328,15 +6265,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6424,7 +6356,10 @@
             "isWritable": false,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6456,7 +6391,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -6483,15 +6423,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6500,15 +6435,10 @@
             "name": "dataHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6517,15 +6447,10 @@
             "name": "creatorHash",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6589,7 +6514,10 @@
             "isWritable": true,
             "isSigner": true,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "payerValueNode"
+            }
           },
           {
             "kind": "instructionAccountNode",
@@ -6649,7 +6577,12 @@
             "isWritable": false,
             "isSigner": false,
             "isOptional": false,
-            "docs": []
+            "docs": [],
+            "defaultValue": {
+              "kind": "publicKeyValueNode",
+              "publicKey": "11111111111111111111111111111111",
+              "identifier": "splSystem"
+            }
           }
         ],
         "arguments": [
@@ -6676,15 +6609,10 @@
             "name": "root",
             "docs": [],
             "type": {
-              "kind": "arrayTypeNode",
-              "item": {
-                "kind": "numberTypeNode",
-                "format": "u8",
-                "endian": "le"
-              },
-              "count": {
-                "kind": "fixedCountNode",
-                "value": 32
+              "kind": "fixedSizeTypeNode",
+              "size": 32,
+              "type": {
+                "kind": "bytesTypeNode"
               }
             }
           },
@@ -6696,15 +6624,10 @@
               "kind": "optionTypeNode",
               "fixed": false,
               "item": {
-                "kind": "arrayTypeNode",
-                "item": {
-                  "kind": "numberTypeNode",
-                  "format": "u8",
-                  "endian": "le"
-                },
-                "count": {
-                  "kind": "fixedCountNode",
-                  "value": 32
+                "kind": "fixedSizeTypeNode",
+                "size": 32,
+                "type": {
+                  "kind": "bytesTypeNode"
                 }
               },
               "prefix": {
@@ -7532,15 +7455,10 @@
                     "name": "dataHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   },
@@ -7549,15 +7467,10 @@
                     "name": "creatorHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   }
@@ -7609,15 +7522,10 @@
                     "name": "dataHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   },
@@ -7626,15 +7534,10 @@
                     "name": "creatorHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   },
@@ -7643,15 +7546,10 @@
                     "name": "collectionHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   },
@@ -7660,15 +7558,10 @@
                     "name": "assetDataHash",
                     "docs": [],
                     "type": {
-                      "kind": "arrayTypeNode",
-                      "item": {
-                        "kind": "numberTypeNode",
-                        "format": "u8",
-                        "endian": "le"
-                      },
-                      "count": {
-                        "kind": "fixedCountNode",
-                        "value": 32
+                      "kind": "fixedSizeTypeNode",
+                      "size": 32,
+                      "type": {
+                        "kind": "bytesTypeNode"
                       }
                     }
                   },
