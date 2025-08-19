@@ -7997,6 +7997,25 @@
             "endian": "le"
           }
         }
+      },
+      {
+        "kind": "definedTypeNode",
+        "name": "updateArgsWrapper",
+        "docs": [],
+        "type": {
+          "kind": "structTypeNode",
+          "fields": [
+            {
+              "kind": "structFieldTypeNode",
+              "name": "wrapped",
+              "docs": [],
+              "type": {
+                "kind": "definedTypeLinkNode",
+                "name": "updateArgs"
+              }
+            }
+          ]
+        }
       }
     ],
     "pdas": [],
