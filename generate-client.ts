@@ -108,6 +108,14 @@ codama.update(
     })
 )
 
+// Update types.
+codama.update(
+    updateDefinedTypesVisitor({
+        // Remove unnecessary types.
+        InstructionName: { delete: true },
+    })
+)
+
 // Render tree.
 writeFileSync(
     path.join("trees", "codama.json"),
