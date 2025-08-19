@@ -1,5 +1,5 @@
 import { type AnchorIdl, rootNodeFromAnchorWithoutDefaultVisitor } from "@codama/nodes-from-anchor";
-import { assertIsNode, bottomUpTransformerVisitor, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, programNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateProgramsVisitor, visit, type Visitor } from "codama";
+import { assertIsNode, bottomUpTransformerVisitor, createFromRoot, deduplicateIdenticalDefinedTypesVisitor, definedTypeLinkNode, definedTypeNode, flattenInstructionDataArgumentsVisitor, getCommonInstructionAccountDefaultRules, programNode, type RootNode, rootNodeVisitor, setFixedAccountSizesVisitor, setInstructionAccountDefaultValuesVisitor, structFieldTypeNode, structTypeNode, transformU8ArraysToBytesVisitor, unwrapInstructionArgsDefinedTypesVisitor, updateDefinedTypesVisitor, updateProgramsVisitor, visit, type Visitor } from "codama";
 import bubblegumIdl from "./idls/bubblegum.json" with { type: "json" };
 import { writeFileSync } from "node:fs";
 import path from "node:path";
@@ -83,6 +83,13 @@ codama.update(
 
 // Apply the DefaultVisitor.
 codama.update(defaultVisitor());
+
+// Delete the unnecessary UpdateArgsWrapper type.
+codama.update(
+    updateDefinedTypesVisitor({
+        UpdateArgsWrapper: { delete: true }
+    })
+);
 
 // Render tree.
 writeFileSync(
