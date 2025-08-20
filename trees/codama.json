@@ -7981,6 +7981,10 @@
                   "format": "u32",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "stringValueNode",
+                "string": ""
               }
             },
             {
@@ -8027,6 +8031,10 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "booleanValueNode",
+                "boolean": false
               }
             },
             {
@@ -8042,6 +8050,10 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "booleanValueNode",
+                "boolean": true
               }
             },
             {
@@ -8063,6 +8075,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8082,6 +8097,17 @@
                   "kind": "numberTypeNode",
                   "format": "u8",
                   "endian": "le"
+                }
+              },
+              "defaultValue": {
+                "kind": "someValueNode",
+                "value": {
+                  "kind": "enumValueNode",
+                  "variant": "nonFungible",
+                  "enum": {
+                    "kind": "definedTypeLinkNode",
+                    "name": "tokenStandard"
+                  }
                 }
               }
             },
@@ -8123,6 +8149,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8132,6 +8161,14 @@
               "type": {
                 "kind": "definedTypeLinkNode",
                 "name": "tokenProgramVersion"
+              },
+              "defaultValue": {
+                "kind": "enumValueNode",
+                "variant": "original",
+                "enum": {
+                  "kind": "definedTypeLinkNode",
+                  "name": "tokenProgramVersion"
+                }
               }
             },
             {
@@ -8200,6 +8237,10 @@
                   "format": "u32",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "stringValueNode",
+                "string": ""
               }
             },
             {
@@ -8246,6 +8287,10 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "booleanValueNode",
+                "boolean": false
               }
             },
             {
@@ -8261,6 +8306,10 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "booleanValueNode",
+                "boolean": true
               }
             },
             {
@@ -8280,6 +8329,17 @@
                   "kind": "numberTypeNode",
                   "format": "u8",
                   "endian": "le"
+                }
+              },
+              "defaultValue": {
+                "kind": "someValueNode",
+                "value": {
+                  "kind": "enumValueNode",
+                  "variant": "nonFungible",
+                  "enum": {
+                    "kind": "definedTypeLinkNode",
+                    "name": "tokenStandard"
+                  }
                 }
               }
             },
@@ -8358,6 +8418,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8384,6 +8447,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8410,6 +8476,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8439,6 +8508,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8458,6 +8530,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8480,6 +8555,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             },
             {
@@ -8502,6 +8580,9 @@
                   "format": "u8",
                   "endian": "le"
                 }
+              },
+              "defaultValue": {
+                "kind": "noneValueNode"
               }
             }
           ]

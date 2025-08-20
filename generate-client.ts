@@ -4,6 +4,7 @@ import {
     accountValueNode,
     argumentValueNode,
     assertIsNode,
+    booleanValueNode,
     bottomUpTransformerVisitor,
     conditionalValueNode,
     constantPdaSeedNodeFromString,
@@ -11,6 +12,7 @@ import {
     deduplicateIdenticalDefinedTypesVisitor,
     definedTypeLinkNode,
     definedTypeNode,
+    enumValueNode,
     flattenInstructionDataArgumentsVisitor,
     getCommonInstructionAccountDefaultRules,
     identityValueNode,
@@ -33,6 +35,9 @@ import {
     rootNodeVisitor,
     setFixedAccountSizesVisitor,
     setInstructionAccountDefaultValuesVisitor,
+    setStructDefaultValuesVisitor,
+    someValueNode,
+    stringValueNode,
     structFieldTypeNode,
     structTypeNode,
     transformU8ArraysToBytesVisitor,
@@ -625,6 +630,42 @@ codama.update(
                 flags: { defaultValue: noneValueNode() },
             }
         }
+    })
+)
+
+// Set default values for structs.
+codama.update(
+    setStructDefaultValuesVisitor({
+        createTreeConfigInstructionData: {
+            public: noneValueNode()
+        },
+        createTreeConfigV2InstructionData: {
+            public: noneValueNode()
+        },
+        metadataArgs: {
+            symbol: stringValueNode(""),
+            primarySaleHappened: booleanValueNode(false),
+            isMutable: booleanValueNode(true),
+            editionNonce: noneValueNode(),
+            tokenStandard: someValueNode(enumValueNode("TokenStandard", "NonFungible")),
+            uses: noneValueNode(),
+            tokenProgramVersion: enumValueNode("TokenProgramVersion", "Original"),
+        },
+        metadataArgsV2: {
+            symbol: stringValueNode(""),
+            primarySaleHappened: booleanValueNode(false),
+            isMutable: booleanValueNode(true),
+            tokenStandard: someValueNode(enumValueNode("TokenStandard", "NonFungible")),
+        },
+        updateArgs: {
+            name: noneValueNode(),
+            symbol: noneValueNode(),
+            uri: noneValueNode(),
+            creators: noneValueNode(),
+            sellerFeeBasisPoints: noneValueNode(),
+            primarySaleHappened: noneValueNode(),
+            isMutable: noneValueNode(),
+        },
     })
 )
 
