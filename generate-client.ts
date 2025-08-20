@@ -1,6 +1,8 @@
 import { type AnchorIdl, rootNodeFromAnchorWithoutDefaultVisitor } from "@codama/nodes-from-anchor";
 import {
+    accountLinkNode,
     accountValueNode,
+    argumentValueNode,
     assertIsNode,
     bottomUpTransformerVisitor,
     conditionalValueNode,
@@ -15,6 +17,9 @@ import {
     type InstructionAccountDefaultRule,
     instructionAccountNode,
     instructionArgumentNode,
+    type InstructionArgumentUpdates,
+    instructionByteDeltaNode,
+    noneValueNode,
     numberTypeNode,
     pdaSeedValueNode,
     pdaValueNode,
@@ -23,6 +28,7 @@ import {
     programNode,
     publicKeyTypeNode,
     publicKeyValueNode,
+    resolverValueNode,
     type RootNode,
     rootNodeVisitor,
     setFixedAccountSizesVisitor,
@@ -33,6 +39,7 @@ import {
     unwrapInstructionArgsDefinedTypesVisitor,
     updateAccountsVisitor,
     updateDefinedTypesVisitor,
+    updateInstructionsVisitor,
     updateProgramsVisitor,
     variablePdaSeedNode,
     visit,
@@ -408,6 +415,219 @@ codama.update(
     ])
 )
 
+// Update instructions.
+const hashUpdates: InstructionArgumentUpdates = {
+    dataHash: {
+        defaultValue: resolverValueNode("resolveDataHash", {
+            dependsOn: [
+                argumentValueNode("metadata")
+            ]
+        })
+    },
+    creatorHash: {
+        defaultValue: resolverValueNode("resolveCreatorHash", {
+            dependsOn: [
+                argumentValueNode("metadata")
+            ]
+        })
+    }
+}
+
+codama.update(
+    updateInstructionsVisitor({
+        createTree: {
+            name: "createTreeConfig",
+            byteDeltas: [
+                instructionByteDeltaNode(accountLinkNode("treeConfig"))
+            ]
+        },
+        mintToCollectionV1: {
+            arguments: {
+                metadataArgs: { name: "metadata" }
+            }
+        },
+        transfer: {
+            accounts: {
+                leafOwner: { isSigner: "either" },
+                leafDelegate: { isSigner: "either" },
+            },
+        },
+        burn: {
+            accounts: {
+                leafOwner: { isSigner: "either" },
+                leafDelegate: { isSigner: "either" },
+            },
+        },
+        redeem: {
+            accounts: {
+                voucher: {
+                    defaultValue: pdaValueNode("voucher", [
+                        pdaSeedValueNode("merkleTree", accountValueNode("merkleTree")),
+                        pdaSeedValueNode("nonce", argumentValueNode("nonce"))
+                    ])
+                },
+            },
+        },
+        decompressV1: {
+            accounts: {
+                metadata: {
+                    name: "metadataAccount",
+                    defaultValue: pdaValueNode("metadata", [
+                        pdaSeedValueNode("mint", accountValueNode("mint"))
+                    ]),
+                },
+                masterEdition: {
+                    defaultValue: pdaValueNode("masterEdition", [
+                        pdaSeedValueNode("mint", accountValueNode("mint"))
+                    ]),
+                },
+                tokenAccount: {
+                    defaultValue: pdaValueNode("associatedToken", [
+                        pdaSeedValueNode("mint", accountValueNode("mint")),
+                        pdaSeedValueNode("tokenProgram", accountValueNode("tokenProgram")),
+                        pdaSeedValueNode("owner", argumentValueNode("tokenOwner")),
+                    ])
+                },
+                mintAuthority: {
+                    defaultValue: pdaValueNode("mintAuthority", [
+                        pdaSeedValueNode("mint", accountValueNode("mint"))
+                    ])
+                },
+            },
+        },
+        setAndVerifyCollection: {
+            accounts: {
+                treeCreatorOrDelegate: { isSigner: "either" },
+            },
+            arguments: {
+                ...hashUpdates,
+                collection: {
+                    defaultValue: accountValueNode("collectionMint")
+                }
+            }
+        },
+        verifyCollection: { arguments: { ...hashUpdates } },
+        unverifyCollection: { arguments: { ...hashUpdates } },
+        verifyCreator: { arguments: { ...hashUpdates } },
+        unverifyCreator: { arguments: { ...hashUpdates } },
+        // Remove deprecated instructions.
+        setDecompressableState: { delete: true },
+        // Remove unnecessary spl_account_compression instructions.
+        append: { delete: true },
+        closeEmptyTree: { delete: true },
+        compress: { delete: true },
+        initEmptyMerkleTree: { delete: true },
+        insertOrAppend: { delete: true },
+        noopInstruction: { delete: true },
+        replaceLeaf: { delete: true },
+        transferAuthority: { delete: true },
+        // V2 instructions
+        burnV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        collectV2: {
+            accounts: {
+                destination: {
+                    defaultValue: publicKeyValueNode("2dgJVPC5fjLTBTmMvKDRig9JJUGK2Fgwr3EHShFxckhv")
+                }
+            }
+        },
+        createTreeV2: {
+            name: "createTreeConfigV2",
+            byteDeltas: [
+                instructionByteDeltaNode(accountLinkNode("treeConfig"))
+            ]
+        },
+        delegateAndFreezeV2: {
+            arguments: {
+                collectionHash: { defaultValue: noneValueNode() },
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() }
+            }
+        },
+        delegateV2: {
+            arguments: {
+                collectionHash: { defaultValue: noneValueNode() },
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        freezeV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        mintV2: {
+            arguments: {
+                metadataArgs: { name: "metadata" },
+                assetData: { defaultValue: noneValueNode() },
+                assetDataSchema: { defaultValue: noneValueNode() }
+            },
+        },
+        setCollectionV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        setNonTransferableV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        thawAndRevokeV2: {
+            arguments: {
+                collectionHash: { defaultValue: noneValueNode() },
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        thawV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() }
+            }
+        },
+        transferV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        unverifyCreatorV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        updateAssetDataV2: {
+            arguments: {
+                previousAssetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+                newAssetData: { defaultValue: noneValueNode() },
+                newAssetDataSchema: { defaultValue: noneValueNode() }
+            }
+        },
+        updateMetadataV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        },
+        verifyCreatorV2: {
+            arguments: {
+                assetDataHash: { defaultValue: noneValueNode() },
+                flags: { defaultValue: noneValueNode() },
+            }
+        }
+    })
+)
+
 // Render tree.
 writeFileSync(
     path.join("trees", "codama.json"),
@@ -427,3 +647,5 @@ writeFileSync(
 // PDA overrides
 // metadata: hooked (copy from https://github.com/mcintyre94/mpl-token-metadata-codama/blob/d44e50e25c171031344bf06b7848ac61856345ec/client-js/src/generated/pdas/metadata.ts#L22)
 // masterEdition: hooked (copy from https://github.dev/mcintyre94/mpl-token-metadata-codama/blob/d44e50e25c171031344bf06b7848ac61856345ec/client-js/src/generated/pdas/masterEdition.ts#L22)
+// associatedToken: hooked (copy from https://github.com/solana-program/token/blob/cf136e7c82526a58859abfc2baaadcdbeb0f751c/clients/js/src/generated/pdas/associatedToken.ts#L25)
+// mintAuthority: hooked (migrate from https://github.com/metaplex-foundation/mpl-bubblegum/blob/905535c5601c013fe961a9e8c8aa43033a276429/clients/js/src/hooked/mintAuthority.ts#L5)
