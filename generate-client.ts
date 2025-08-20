@@ -1,7 +1,6 @@
 import { type AnchorIdl, rootNodeFromAnchorWithoutDefaultVisitor, defaultVisitor } from "@codama/nodes-from-anchor";
 import {
     accountLinkNode,
-    accountNode,
     accountValueNode,
     argumentValueNode,
     assertIsNode,
@@ -33,6 +32,8 @@ import {
     publicKeyTypeNode,
     publicKeyValueNode,
     resolverValueNode,
+    rootNode,
+    rootNodeVisitor,
     setInstructionAccountDefaultValuesVisitor,
     setStructDefaultValuesVisitor,
     someValueNode,
@@ -45,6 +46,7 @@ import {
     updateProgramsVisitor,
     variablePdaSeedNode
 } from "codama";
+import { renderVisitor as renderJavaScriptVisitor } from "@codama/renderers-js";
 import bubblegumIdl from "./idls/bubblegum.json" with { type: "json" };
 import { writeFileSync } from "node:fs";
 import path from "node:path";
@@ -207,6 +209,15 @@ for (let ix of deprecatedTmIxes) {
         })
 }
 
+const programAddresses = {
+    splNoop: "noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV",
+    splAccountCompression: "cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK",
+    mplNoop: "mnoopTCrg4p8ry25e4bcWA9XZjbNjMTfgYVGGEdRsf3",
+    mplAccountCompression: "mcmt6YrQEMKw8Mw43FmpRLmf7BqRnFMKmAcbxE3xkAW",
+    splAssociatedToken: "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+    mplCore: "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d",
+}
+
 // Use spl-noop and spl-account-compression as defaults for all
 // V1 instructions.
 const v1Ixs = [
@@ -234,14 +245,14 @@ for (let ix of v1Ixs) {
             account: "logWrapper",
             ignoreIfOptional: true,
             instruction: ix,
-            defaultValue: programLinkNode("splNoop")
+            defaultValue: publicKeyValueNode(programAddresses.splNoop, "splNoop")
         })
     v1IxUpdaters.push(
         {
             account: "compressionProgram",
             ignoreIfOptional: true,
             instruction: ix,
-            defaultValue: programLinkNode("splAccountCompression"),
+            defaultValue: publicKeyValueNode(programAddresses.splAccountCompression, "splAccountCompression")
         })
 }
 
@@ -271,14 +282,14 @@ for (let ix of v2Ixs) {
             account: "logWrapper",
             ignoreIfOptional: true,
             instruction: ix,
-            defaultValue: programLinkNode("mplNoop")
+            defaultValue: publicKeyValueNode(programAddresses.mplNoop, "mplNoop")
         })
     v2IxUpdaters.push(
         {
             account: "compressionProgram",
             ignoreIfOptional: true,
             instruction: ix,
-            defaultValue: programLinkNode("mplAccountCompression"),
+            defaultValue: publicKeyValueNode(programAddresses.mplAccountCompression, "mplAccountCompression")
         })
 }
 
@@ -306,12 +317,12 @@ codama.update(
         {
             account: "associatedTokenProgram",
             ignoreIfOptional: true,
-            defaultValue: programLinkNode("splAssociatedToken"),
+            defaultValue: publicKeyValueNode(programAddresses.splAssociatedToken, "splAssociatedToken")
         },
         {
             account: "mplCoreProgram",
             ignoreIfOptional: true,
-            defaultValue: programLinkNode("mplCore")
+            defaultValue: publicKeyValueNode(programAddresses.mplCore, "mplCore")
         },
         {
             account: "treeCreator",
@@ -448,7 +459,7 @@ codama.update(
                     defaultValue: pdaValueNode("associatedToken", [
                         pdaSeedValueNode("mint", accountValueNode("mint")),
                         pdaSeedValueNode("tokenProgram", accountValueNode("tokenProgram")),
-                        pdaSeedValueNode("owner", argumentValueNode("tokenOwner")),
+                        pdaSeedValueNode("owner", accountValueNode("leafOwner")),
                     ])
                 },
                 mintAuthority: {
@@ -685,20 +696,25 @@ writeFileSync(
 );
 
 // Render Javascript client.
-// Program link overrides
-// splNoop: "noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV"
-// splAccountCompression: "cmtDvXumGCrqC1Age74AVPhSRVXJMd8PJS91L8KbNCK"
-// mplNoop: "mnoopTCrg4p8ry25e4bcWA9XZjbNjMTfgYVGGEdRsf3"
-// mplAccountCompression: "mcmt6YrQEMKw8Mw43FmpRLmf7BqRnFMKmAcbxE3xkAW"
-// splAssociatedToken: "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
-// mplCore: "CoREENxT6tW1HoK8ypY1SxRMZTcVPm7R94rH4PZNhX7d"
-// bubblegum: "BGUMAp9Gq7iTEuizy4pqaxsTyUCBK68MDfK752saRPUY"
+codama.accept(
+    renderJavaScriptVisitor("clients/js/src/generated/", {
+        deleteFolderBeforeRendering: true,
+        formatCode: true,
+        linkOverrides: {
+            pdas: {
+                metadata: "hooked",
+                masterEdition: "hooked",
+                associatedToken: "hooked",
+                mintAuthority: "hooked",
+            }
+        }
+    })
+);
+
+// Render Javascript client.
 
 // PDA overrides
 // metadata: hooked (copy from https://github.com/mcintyre94/mpl-token-metadata-codama/blob/d44e50e25c171031344bf06b7848ac61856345ec/client-js/src/generated/pdas/metadata.ts#L22)
 // masterEdition: hooked (copy from https://github.dev/mcintyre94/mpl-token-metadata-codama/blob/d44e50e25c171031344bf06b7848ac61856345ec/client-js/src/generated/pdas/masterEdition.ts#L22)
 // associatedToken: hooked (copy from https://github.com/solana-program/token/blob/cf136e7c82526a58859abfc2baaadcdbeb0f751c/clients/js/src/generated/pdas/associatedToken.ts#L25)
 // mintAuthority: hooked (migrate from https://github.com/metaplex-foundation/mpl-bubblegum/blob/905535c5601c013fe961a9e8c8aa43033a276429/clients/js/src/hooked/mintAuthority.ts#L5)
-
-// custom account data
-// merkleTree

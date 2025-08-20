@@ -48,6 +48,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@noble/hashes": "^1.8.0",
     "@solana-program/token": "^0.5.1"
   },
   "ava": {
