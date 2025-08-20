@@ -13,12 +13,16 @@ import {
     definedTypeLinkNode,
     definedTypeNode,
     enumValueNode,
+    getLastNodeFromPath,
     identityValueNode,
     type InstructionAccountDefaultRule,
     instructionAccountNode,
     instructionArgumentNode,
     type InstructionArgumentUpdates,
     instructionByteDeltaNode,
+    instructionNode,
+    instructionRemainingAccountsNode,
+    isNode,
     noneValueNode,
     numberTypeNode,
     pdaSeedValueNode,
@@ -624,67 +628,55 @@ codama.update(
 )
 
 // Custom tree updates.
-// codama.update(
-//     bottomUpTransformerVisitor([
-//         {
-//             // Add nodes to the splAccountCompression program.
-//             select: '[programNode]splAccountCompression',
-//             transform: (node) => {
-//                 assertIsNode(node, "programNode");
-//                 return programNode({
-//                     ...node,
-//                     accounts: [
-//                         ...node.accounts,
-//                         accountNode({
-//                             name: "merkleTree",
-//                             data: definedTypeLinkNode()
+const instructionsWithProofArg = [
+    "burn",
+    "transfer",
+    "redeem",
+    "delegate",
+    "setAndVerifyCollection",
+    "verifyCollection",
+    "unverifyCollection",
+    "verifyCreator",
+    "unverifyCreator",
+    "verifyLeaf",
+    "updateMetadata",
+    "burnV2",
+    "delegateAndFreezeV2",
+    "delegateV2",
+    "freezeV2",
+    "setCollectionV2",
+    "setNonTransferableV2",
+    "thawAndRevokeV2",
+    "thawV2",
+    "transferV2",
+    "unverifyCreatorV2",
+    "updateAssetDataV2",
+    "updateMetadataV2",
+    "verifyCreatorV2"
+];
 
-//                     ]
-//                 })
-//             }
-
-//         }
-//     ])
-// )
-
-// kinobi.update(
-//     new k.TransformNodesVisitor([
-//         {
-//             // Add nodes to the splAccountCompression program.
-//             selector: { kind: "programNode", name: "splAccountCompression" },
-//             transformer: (node) => {
-//                 k.assertProgramNode(node);
-//                 return k.programNode({
-//                     ...node,
-//                     accounts: [
-//                         ...node.accounts,
-//                         k.accountNode({
-//                             name: "merkleTree",
-//                             data: k.accountDataNode({
-//                                 name: "merkleTreeAccountData",
-//                                 link: k.linkTypeNode("merkleTreeAccountData", {
-//                                     importFrom: "hooked",
-//                                 }),
-//                                 struct: k.structTypeNode([
-//                                     k.structFieldTypeNode({
-//                                         name: "discriminator",
-//                                         child: k.linkTypeNode("compressionAccountType"),
-//                                     }),
-//                                     k.structFieldTypeNode({
-//                                         name: "treeHeader",
-//                                         child: k.linkTypeNode("concurrentMerkleTreeHeaderData"),
-//                                     }),
-//                                     k.structFieldTypeNode({
-//                                         name: "serializedTree",
-//                                         child: k.bytesTypeNode(k.remainderSize()),
-//                                     }),
-//                                 ]),
-//                             }),
-//                         }),
-//                     ],
-//                 });
-//             },
-//         },
+codama.update(
+    bottomUpTransformerVisitor([
+        // Use extra "proof" arg as remaining accounts.
+        {
+            select: (path) => {
+                const node = getLastNodeFromPath(path);
+                return isNode(node, "instructionNode") && instructionsWithProofArg.includes(node.name);
+            },
+            transform: (node) => {
+                assertIsNode(node, "instructionNode");
+                return instructionNode({
+                    ...node,
+                    remainingAccounts: [
+                        instructionRemainingAccountsNode(argumentValueNode("proof"), {
+                            isOptional: true,
+                        }),
+                    ],
+                });
+            }
+        }
+    ])
+);
 
 // Render tree.
 writeFileSync(
@@ -707,3 +699,6 @@ writeFileSync(
 // masterEdition: hooked (copy from https://github.dev/mcintyre94/mpl-token-metadata-codama/blob/d44e50e25c171031344bf06b7848ac61856345ec/client-js/src/generated/pdas/masterEdition.ts#L22)
 // associatedToken: hooked (copy from https://github.com/solana-program/token/blob/cf136e7c82526a58859abfc2baaadcdbeb0f751c/clients/js/src/generated/pdas/associatedToken.ts#L25)
 // mintAuthority: hooked (migrate from https://github.com/metaplex-foundation/mpl-bubblegum/blob/905535c5601c013fe961a9e8c8aa43033a276429/clients/js/src/hooked/mintAuthority.ts#L5)
+
+// custom account data
+// merkleTree

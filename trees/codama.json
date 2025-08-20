@@ -360,6 +360,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -647,6 +658,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -1652,6 +1674,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -1921,6 +1954,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -2196,6 +2240,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -2448,6 +2503,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -3357,6 +3423,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -3712,6 +3789,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -3997,6 +4085,17 @@
             "type": {
               "kind": "definedTypeLinkNode",
               "name": "metadataArgsV2"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -4320,6 +4419,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -4687,6 +4797,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -4942,6 +5063,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -5130,6 +5262,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -5395,6 +5538,17 @@
               "kind": "numberTypeNode",
               "format": "u32",
               "endian": "le"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -5741,6 +5895,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -5974,6 +6139,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -6204,6 +6380,17 @@
             "type": {
               "kind": "definedTypeLinkNode",
               "name": "metadataArgsV2"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -6511,6 +6698,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -6750,6 +6948,17 @@
             "type": {
               "kind": "definedTypeLinkNode",
               "name": "updateArgs"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -7001,6 +7210,17 @@
             "type": {
               "kind": "definedTypeLinkNode",
               "name": "updateArgs"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
@@ -7347,6 +7567,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -7580,6 +7811,17 @@
             }
           }
         ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
+            }
+          }
+        ],
         "discriminators": [
           {
             "kind": "fieldDiscriminatorNode",
@@ -7810,6 +8052,17 @@
             "type": {
               "kind": "definedTypeLinkNode",
               "name": "metadataArgsV2"
+            }
+          }
+        ],
+        "remainingAccounts": [
+          {
+            "kind": "instructionRemainingAccountsNode",
+            "isOptional": true,
+            "docs": [],
+            "value": {
+              "kind": "argumentValueNode",
+              "name": "proof"
             }
           }
         ],
