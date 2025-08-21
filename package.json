@@ -6,7 +6,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate:clients": "node --experimental-strip-types generate-client.ts"
+    "programs:build": "./configs/scripts/program/build.sh",
+    "generate:clients": "node --experimental-strip-types generate-client.ts",
+    "clients:js:test": "./configs/scripts/client/test-js.sh",
+    "validator": "CI=1 amman start --config ./configs/validator.cjs",
+    "validator:debug": "amman start --config ./configs/validator.cjs",
+    "validator:logs": "CI=1 amman logs",
+    "validator:stop": "amman stop"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +23,8 @@
     "@codama/renderers-js": "^1.3.4",
     "@types/node": "^24.3.0",
     "codama": "^1.3.3"
+  },
+  "devDependencies": {
+    "@metaplex-foundation/amman": "^0.12.1"
   }
 }
