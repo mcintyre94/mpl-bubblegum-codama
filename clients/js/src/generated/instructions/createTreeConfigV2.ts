@@ -21,6 +21,7 @@ import {
   getStructEncoder,
   getU32Decoder,
   getU32Encoder,
+  none,
   transformEncoder,
   type AccountMeta,
   type AccountSignerMeta,
@@ -117,7 +118,7 @@ export type CreateTreeConfigV2InstructionData = {
 export type CreateTreeConfigV2InstructionDataArgs = {
   maxDepth: number;
   maxBufferSize: number;
-  public: OptionOrNullable<boolean>;
+  public?: OptionOrNullable<boolean>;
 };
 
 export function getCreateTreeConfigV2InstructionDataEncoder(): Encoder<CreateTreeConfigV2InstructionDataArgs> {
@@ -131,6 +132,7 @@ export function getCreateTreeConfigV2InstructionDataEncoder(): Encoder<CreateTre
     (value) => ({
       ...value,
       discriminator: CREATE_TREE_CONFIG_V2_DISCRIMINATOR,
+      public: value.public ?? none(),
     })
   );
 }
@@ -173,7 +175,7 @@ export type CreateTreeConfigV2AsyncInput<
   systemProgram?: Address<TAccountSystemProgram>;
   maxDepth: CreateTreeConfigV2InstructionDataArgs['maxDepth'];
   maxBufferSize: CreateTreeConfigV2InstructionDataArgs['maxBufferSize'];
-  public: CreateTreeConfigV2InstructionDataArgs['public'];
+  public?: CreateTreeConfigV2InstructionDataArgs['public'];
 };
 
 export async function getCreateTreeConfigV2InstructionAsync<
@@ -307,7 +309,7 @@ export type CreateTreeConfigV2Input<
   systemProgram?: Address<TAccountSystemProgram>;
   maxDepth: CreateTreeConfigV2InstructionDataArgs['maxDepth'];
   maxBufferSize: CreateTreeConfigV2InstructionDataArgs['maxBufferSize'];
-  public: CreateTreeConfigV2InstructionDataArgs['public'];
+  public?: CreateTreeConfigV2InstructionDataArgs['public'];
 };
 
 export function getCreateTreeConfigV2Instruction<

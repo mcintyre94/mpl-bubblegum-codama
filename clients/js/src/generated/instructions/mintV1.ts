@@ -157,7 +157,7 @@ export type MintV1AsyncInput<
   leafOwner: Address<TAccountLeafOwner>;
   leafDelegate?: Address<TAccountLeafDelegate>;
   merkleTree: Address<TAccountMerkleTree>;
-  payer: TransactionSigner<TAccountPayer>;
+  payer?: TransactionSigner<TAccountPayer>;
   treeCreatorOrDelegate: TransactionSigner<TAccountTreeCreatorOrDelegate>;
   logWrapper?: Address<TAccountLogWrapper>;
   compressionProgram?: Address<TAccountCompressionProgram>;
@@ -242,6 +242,9 @@ export async function getMintV1InstructionAsync<
   if (!accounts.leafDelegate.value) {
     accounts.leafDelegate.value = expectSome(accounts.leafOwner.value);
   }
+  if (!accounts.payer.value) {
+    accounts.payer.value = expectSome(accounts.treeCreatorOrDelegate.value);
+  }
   if (!accounts.logWrapper.value) {
     accounts.logWrapper.value =
       'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV' as Address<'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV'>;
@@ -303,7 +306,7 @@ export type MintV1Input<
   leafOwner: Address<TAccountLeafOwner>;
   leafDelegate?: Address<TAccountLeafDelegate>;
   merkleTree: Address<TAccountMerkleTree>;
-  payer: TransactionSigner<TAccountPayer>;
+  payer?: TransactionSigner<TAccountPayer>;
   treeCreatorOrDelegate: TransactionSigner<TAccountTreeCreatorOrDelegate>;
   logWrapper?: Address<TAccountLogWrapper>;
   compressionProgram?: Address<TAccountCompressionProgram>;
@@ -380,6 +383,9 @@ export function getMintV1Instruction<
   // Resolve default values.
   if (!accounts.leafDelegate.value) {
     accounts.leafDelegate.value = expectSome(accounts.leafOwner.value);
+  }
+  if (!accounts.payer.value) {
+    accounts.payer.value = expectSome(accounts.treeCreatorOrDelegate.value);
   }
   if (!accounts.logWrapper.value) {
     accounts.logWrapper.value =

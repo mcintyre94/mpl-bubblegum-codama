@@ -48,7 +48,12 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "@mcintyre94/spl-account-compression": "^0.0.2",
+    "@metaplex-foundation/mpl-bubblegum": "^5.0.2",
+    "@metaplex-foundation/umi": "^1.2.0",
+    "@metaplex-foundation/umi-bundle-tests": "^1.2.0",
     "@noble/hashes": "^1.8.0",
+    "@solana-program/system": "^0.7.0",
     "@solana-program/token": "^0.5.1"
   },
   "ava": {

@@ -604,13 +604,26 @@ codama.update(
 
 // Set default values for structs.
 codama.update(
+    updateInstructionsVisitor({
+        createTreeConfig: {
+            arguments: {
+                public: {
+                    defaultValue: noneValueNode(),
+                }
+            }
+        },
+        createTreeConfigV2: {
+            arguments: {
+                public: {
+                    defaultValue: noneValueNode(),
+                }
+            }
+        }
+    })
+)
+
+codama.update(
     setStructDefaultValuesVisitor({
-        createTreeConfigInstructionData: {
-            public: noneValueNode()
-        },
-        createTreeConfigV2InstructionData: {
-            public: noneValueNode()
-        },
         metadataArgs: {
             symbol: stringValueNode(""),
             primarySaleHappened: booleanValueNode(false),
@@ -688,6 +701,22 @@ codama.update(
         }
     ])
 );
+
+// Additional default accounts for Codama
+codama.update(
+    setInstructionAccountDefaultValuesVisitor([
+        {
+            instruction: 'createTreeConfig',
+            account: 'payer',
+            defaultValue: accountValueNode('treeCreator'),
+        },
+        {
+            instruction: 'mintV1',
+            account: 'payer',
+            defaultValue: accountValueNode('treeCreatorOrDelegate'),
+        }
+    ])
+)
 
 // Render tree.
 writeFileSync(

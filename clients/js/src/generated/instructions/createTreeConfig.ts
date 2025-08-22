@@ -21,6 +21,7 @@ import {
   getStructEncoder,
   getU32Decoder,
   getU32Encoder,
+  none,
   transformEncoder,
   type AccountMeta,
   type AccountSignerMeta,
@@ -45,6 +46,7 @@ import { findTreeConfigPda } from '../pdas';
 import { MPL_BUBBLEGUM_PROGRAM_ADDRESS } from '../programs';
 import {
   expectAddress,
+  expectSome,
   getAccountMetaFactory,
   type InstructionWithByteDelta,
   type ResolvedAccount,
@@ -117,7 +119,7 @@ export type CreateTreeConfigInstructionData = {
 export type CreateTreeConfigInstructionDataArgs = {
   maxDepth: number;
   maxBufferSize: number;
-  public: OptionOrNullable<boolean>;
+  public?: OptionOrNullable<boolean>;
 };
 
 export function getCreateTreeConfigInstructionDataEncoder(): Encoder<CreateTreeConfigInstructionDataArgs> {
@@ -128,7 +130,11 @@ export function getCreateTreeConfigInstructionDataEncoder(): Encoder<CreateTreeC
       ['maxBufferSize', getU32Encoder()],
       ['public', getOptionEncoder(getBooleanEncoder())],
     ]),
-    (value) => ({ ...value, discriminator: CREATE_TREE_CONFIG_DISCRIMINATOR })
+    (value) => ({
+      ...value,
+      discriminator: CREATE_TREE_CONFIG_DISCRIMINATOR,
+      public: value.public ?? none(),
+    })
   );
 }
 
@@ -162,14 +168,14 @@ export type CreateTreeConfigAsyncInput<
 > = {
   treeConfig?: Address<TAccountTreeConfig>;
   merkleTree: Address<TAccountMerkleTree>;
-  payer: TransactionSigner<TAccountPayer>;
+  payer?: TransactionSigner<TAccountPayer>;
   treeCreator: TransactionSigner<TAccountTreeCreator>;
   logWrapper?: Address<TAccountLogWrapper>;
   compressionProgram?: Address<TAccountCompressionProgram>;
   systemProgram?: Address<TAccountSystemProgram>;
   maxDepth: CreateTreeConfigInstructionDataArgs['maxDepth'];
   maxBufferSize: CreateTreeConfigInstructionDataArgs['maxBufferSize'];
-  public: CreateTreeConfigInstructionDataArgs['public'];
+  public?: CreateTreeConfigInstructionDataArgs['public'];
 };
 
 export async function getCreateTreeConfigInstructionAsync<
@@ -236,6 +242,9 @@ export async function getCreateTreeConfigInstructionAsync<
       merkleTree: expectAddress(accounts.merkleTree.value),
     });
   }
+  if (!accounts.payer.value) {
+    accounts.payer.value = expectSome(accounts.treeCreator.value);
+  }
   if (!accounts.logWrapper.value) {
     accounts.logWrapper.value =
       'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV' as Address<'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV'>;
@@ -295,14 +304,14 @@ export type CreateTreeConfigInput<
 > = {
   treeConfig: Address<TAccountTreeConfig>;
   merkleTree: Address<TAccountMerkleTree>;
-  payer: TransactionSigner<TAccountPayer>;
+  payer?: TransactionSigner<TAccountPayer>;
   treeCreator: TransactionSigner<TAccountTreeCreator>;
   logWrapper?: Address<TAccountLogWrapper>;
   compressionProgram?: Address<TAccountCompressionProgram>;
   systemProgram?: Address<TAccountSystemProgram>;
   maxDepth: CreateTreeConfigInstructionDataArgs['maxDepth'];
   maxBufferSize: CreateTreeConfigInstructionDataArgs['maxBufferSize'];
-  public: CreateTreeConfigInstructionDataArgs['public'];
+  public?: CreateTreeConfigInstructionDataArgs['public'];
 };
 
 export function getCreateTreeConfigInstruction<
@@ -362,6 +371,9 @@ export function getCreateTreeConfigInstruction<
   const args = { ...input };
 
   // Resolve default values.
+  if (!accounts.payer.value) {
+    accounts.payer.value = expectSome(accounts.treeCreator.value);
+  }
   if (!accounts.logWrapper.value) {
     accounts.logWrapper.value =
       'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV' as Address<'noopb9bkMVfRPU8AsbpTUg8AQkHtKwMYZiFUjNRtMmV'>;

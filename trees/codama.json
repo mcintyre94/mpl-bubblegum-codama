@@ -927,7 +927,8 @@
             "isOptional": false,
             "docs": [],
             "defaultValue": {
-              "kind": "payerValueNode"
+              "kind": "accountValueNode",
+              "name": "treeCreator"
             }
           },
           {
@@ -1040,6 +1041,9 @@
                 "format": "u8",
                 "endian": "le"
               }
+            },
+            "defaultValue": {
+              "kind": "noneValueNode"
             }
           }
         ],
@@ -1223,6 +1227,9 @@
                 "format": "u8",
                 "endian": "le"
               }
+            },
+            "defaultValue": {
+              "kind": "noneValueNode"
             }
           }
         ],
@@ -2877,7 +2884,8 @@
             "isOptional": false,
             "docs": [],
             "defaultValue": {
-              "kind": "payerValueNode"
+              "kind": "accountValueNode",
+              "name": "treeCreatorOrDelegate"
             }
           },
           {
